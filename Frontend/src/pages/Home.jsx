@@ -4,6 +4,7 @@ import SpecialityMenu from '../components/SpecialityMenu'
 import ToDoctors from '../components/ToDoctors'
 import Banner from '../components/Banner'
 
+
 function Home() {
   return (
     <div>
@@ -11,6 +12,7 @@ function Home() {
       <SpecialityMenu />
       <ToDoctors />
       <Banner/>
+      
     </div>
   )
 }
