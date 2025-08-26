@@ -1,6 +1,8 @@
-import React from 'react'
 
-function MyAppointments() {
+
+const MyAppointments = () => {
+
+  
   return (
     <div>MyAppointments</div>
   )
