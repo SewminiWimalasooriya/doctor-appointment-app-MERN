@@ -5,10 +5,11 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props)  => {
 
+    const currencySymbol = "$"  // Define currencySymbol here , so it can change from here to all pages
 
 
     const value = {
-        doctors
+        doctors,currencySymbol,
     }
 
     return (
