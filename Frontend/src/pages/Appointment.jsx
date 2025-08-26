@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 import { useContext } from 'react'
 import { assets } from '../assets/assets'
+import RelatedDoctors from '../components/RelatedDoctors'
 
 const Appointment = () => {
 
@@ -32,7 +33,7 @@ const Appointment = () => {
     let today = new Date();
 
     for (let i = 0; i < 7; i++) {
-      //getinng date with index
+      //getinng date with index.ex:14 th set to 15th
       let currentDate = new Date(today)
       currentDate.setDate(today.getDate() + i)
 
@@ -145,6 +146,8 @@ const Appointment = () => {
         <button className='bg-primary text-white  text-sm font-sm font-light px-14 py-3 rounded-full my-6'>Book an appointment</button>
 
       </div>
+      {/*--------Listing Related Doctors------  */}
+      <RelatedDoctors docId={docId} speciality={docInfo.speciality}/>
     </div>
   )
 }
