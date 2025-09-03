@@ -14,3 +14,9 @@
 ::-webkit-scrollbar{
     @apply hidden
 }
+/* to active  navLink add colour */
+@media (max-width:740px){
+    .active p{
+        @apply text-white bg-primary
+    }
+}
