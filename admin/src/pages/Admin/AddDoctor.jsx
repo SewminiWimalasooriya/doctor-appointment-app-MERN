@@ -61,19 +61,19 @@ const AddDoctor = () => {
         }
       );
     
-      console.log("response:", data);
+      
 
       if (data.success) {
-        toast.success(data.message);
-        setDocImg(false);
-        setName("");
-        setEmail("");
-        setPassword("");
-        setFees("");
-        setAddress1("");
-        setAddress2("");
-        setAbout("");
-        setDegree("");
+        toast.success(data.message)
+        setDocImg(false)
+        setName("")
+        setEmail("")
+        setPassword("")
+        setFees("")
+        setAddress1("")
+        setAddress2("")
+        setAbout("")
+        setDegree("")
       } else {
         toast.error(data.message);
       }

@@ -1,6 +1,8 @@
 # Node modules
 Frontend/node_modules
 Backend/node_modules
+admin/node_modules
+
 
 # Logs
 npm-debug.log*
@@ -13,7 +15,9 @@ yarn-error.log*
 # OS / editor files
 .DS_Store
 Thumbs.db
+.vscode/
 
 # Environment files
 Frontend/.env
 Backend/.env
+admin/.env
