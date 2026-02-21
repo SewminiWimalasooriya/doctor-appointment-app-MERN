@@ -2,11 +2,11 @@ import jwt from 'jsonwebtoken';
 
 
 //admin auth middleware
-const authAdmin = async (requestAnimationFrame,resizeBy,next) =>{
+const authAdmin = async (req,res,next) =>{
     try {
-        const {atoken} = requestAnimationFrame.headers
+        const {atoken} = req.headers
         if (!atoken){
-            return resizeBy.json({
+            return res.json({
                 success:false,
                 message: "No authorized login again"
             })
@@ -14,11 +14,12 @@ const authAdmin = async (requestAnimationFrame,resizeBy,next) =>{
         const token_decode = jwt.verify(atoken,process.env.JWT_SECRET)
 
         if (token_decode !== process.env.ADMIN_EMAIL + process.env.ADMIN_PASSWORD){
-            return resizeBy.json({
+            return res.json({
                 success:false,
                 message: "No authorized login again.not mach server create token"
             })
         }
+        next()
         
     } catch (error) {
         console.log(error)
